@@ -1,0 +1,13 @@
+name: 'Lift Off'
+description: 'Lift Off send chat to Jetbrains Space'
+inputs:
+  message:  # id of input
+    description: 'message to send'
+    required: true
+    default: 'Hello World, its me ready to lunch 🚀'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'index.js'
