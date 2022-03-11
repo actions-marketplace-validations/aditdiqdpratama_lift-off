@@ -5,16 +5,16 @@ This action send chat to Jetbrains Space
 ## Inputs
 
 ## `token`
-**Required** your private access token, right now only support for lifetime access token
+**Required** Private access token, right now only support for lifetime access token
 
 ## `message`
-your text message payload, default message: `Hello World, its me ready to lunch 🚀`
+Text message payload, default message: `Hello World, its me ready to lunch 🚀`
 
 ## `channel`
-**Required** your jetbrains space base url
+**Required** Jetbrains Space channel id
 
 ## `base-url`
-**Required** your jetbrains space base url
+**Required** Jetbrains Space base url
 
 ## Outputs
 

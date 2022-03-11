@@ -30,8 +30,9 @@ try {
         .then(result => console.log(result));
 
     const time = (new Date()).toTimeString();
-    // `time` output defined in action metadata file
-    core.setOutput("time", time);
 } catch (error) {
     core.setFailed(error.message);
 }
+
+// `time` output defined in action metadata file
+core.setOutput("time", time);

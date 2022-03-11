@@ -1,13 +1,22 @@
 name: 'Lift Off'
 description: 'Lift Off send chat to Jetbrains Space'
 inputs:
-  message:  # id of input
-    description: 'message to send'
+  token:
+    description: 'private access token'
     required: true
+  message:
+    description: 'message to send'
+    required: false
     default: 'Hello World, its me ready to lunch 🚀'
+  channel:
+    description: 'Jetbrains Space channel id'
+    required: true
+  base-url:
+    description: 'Jetbrains Space base url'
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  time:
+    description: 'Timestamp on action done'
 runs:
   using: 'node16'
   main: 'index.js'
