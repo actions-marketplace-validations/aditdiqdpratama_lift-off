@@ -1,4 +1,6 @@
 const core = require('@actions/core');
+const { Headers } = require('node-fetch');
+const fetch = require('node-fetch');
 
 try {
     var myHeaders = new Headers();
@@ -29,10 +31,10 @@ try {
         .then(response => response.text())
         .then(result => console.log(result));
 
-    const time = (new Date()).toTimeString();
 } catch (error) {
     core.setFailed(error.message);
 }
 
 // `time` output defined in action metadata file
+const time = (new Date()).toTimeString();
 core.setOutput("time", time);
