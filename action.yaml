@@ -1,4 +1,4 @@
-name: 'Lift Off'
+name: 'aditdiqdpratama/lift-off'
 description: 'Lift Off send chat to Jetbrains Space'
 inputs:
   token:
