@@ -1,14 +1,7 @@
 const core = require('@actions/core');
-const { Headers } = require('node-fetch');
 const fetch = require('node-fetch');
 
 try {
-    var myHeaders = new Headers();
-    myHeaders.append("Accept", "application/json");
-    // `token` input defined in action metadata file
-    myHeaders.append("Authorization", `Bearer ${core.getInput('token')}`);
-    myHeaders.append("Content-Type", "application/json");
-
     var raw = JSON.stringify({
         "content": {
             "className": "ChatMessage.Text",
@@ -21,7 +14,12 @@ try {
 
     var requestOptions = {
         method: 'POST',
-        headers: myHeaders,
+        headers: {
+            "Accept": "application/json",
+            // `token` input defined in action metadata file
+            "Authorization": `Bearer ${core.getInput('token')}`,
+            "Content-Type": "application/json"
+        },
         body: raw,
         redirect: 'follow'
     };
